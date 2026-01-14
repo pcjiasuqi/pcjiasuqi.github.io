@@ -195,6 +195,16 @@ notify-send </span><span><span class="hljs-string">'Shadowrocket 启动成功！
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 还能用吗？</h5></div>
+    <div class="panel-body">
+        虽然 SSR 项目早已停止维护，但部分服务器和机场仍提供 SSR 节点。SSR 使用的加密与混淆方式能应对部分防火墙检测。不过，建议用户逐步迁移到 V2Ray 或 Trojan 等更现代的协议以获得更好稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 如何实现精确域名分流？</h5></div>
+    <div class="panel-body">
+        Sing-box 可以按域名设置分流规则，将不同流量发送到指定节点。结合策略组使用，可实现网页、视频和游戏流量精准分配，提高访问速度和网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 与 Nekobox 有什么区别？</h5></div>
     <div class="panel-body">
         Nekoray 是基于 sing-box 的多平台代理客户端，支持 Windows、Linux 等系统；而 Nekobox 则是为 Android 设计的移动版本。两者共享相同的核心逻辑，均支持 VMess、VLess、Trojan 等协议，适合跨设备同步使用。<hr />    </div>
@@ -205,34 +215,9 @@ notify-send </span><span><span class="hljs-string">'Shadowrocket 启动成功！
         WinXray 是一款基于 V2Ray 核心的 Windows 客户端，界面直观，支持 VMess、VLess、Trojan、Shadowsocks 等多协议。它提供一键导入订阅、节点测速、自动分流等功能，是适合初学者和进阶用户的图形化代理工具。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 如何管理不同用户的带宽？</h5></div>
-    <div class="panel-body">
-        管理员可以为每个用户设置独立带宽限制和流量配额。超出配额时可自动阻断或降速，确保服务器资源合理分配，避免单用户占用过多带宽，保障整体网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>何为 multiplex (mux)，启用后会有哪些利弊？</h5></div>
-    <div class="panel-body">
-        mux 是多路复用技术，可在单一连接上传输多路流量，从而减少握手次数与连接开销。优点是提升短连接并发效率，缺点是在丢包或单连接异常时可能影响多条会话并增加调试复杂度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 可以管理多少个节点？</h5></div>
-    <div class="panel-body">
-        Potatso Lite 可以管理数十个节点，适合轻量用户使用。虽然不支持批量自动更新，但可以手动添加和删除节点，结合策略组实现基本分流和管理功能。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 节点订阅如何实现自动更新？</h5></div>
     <div class="panel-body">
         用户可添加订阅 URL，Nekoray 会定期自动下载并更新节点列表。保持节点最新可减少手动维护，提高节点可用性和网络连接稳定性，确保科学上网体验顺畅。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 使用哪种加密算法？</h5></div>
-    <div class="panel-body">
-        Hysteria2 默认使用 AEAD 加密算法（如 ChaCha20-Poly1305），并可结合 TLS 层加密保障安全性。其设计兼顾速度与抗干扰能力，适合高延迟跨境网络环境。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 如何实现精确域名分流？</h5></div>
-    <div class="panel-body">
-        Sing-box 可以按域名设置分流规则，将不同流量发送到指定节点。结合策略组使用，可实现网页、视频和游戏流量精准分配，提高访问速度和网络稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 的协议插件与加密方式如何搭配使用？</h5></div>
@@ -240,9 +225,24 @@ notify-send </span><span><span class="hljs-string">'Shadowrocket 启动成功！
         协议插件可增强抗封锁能力，加密方式确保数据安全。合理搭配可模拟正常流量特征，同时保障传输安全，有助于在封锁严格环境下维持节点可用性和稳定连接。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 还能用吗？</h5></div>
+    <div class="panel-heading"><h5>何为 multiplex (mux)，启用后会有哪些利弊？</h5></div>
     <div class="panel-body">
-        虽然 SSR 项目早已停止维护，但部分服务器和机场仍提供 SSR 节点。SSR 使用的加密与混淆方式能应对部分防火墙检测。不过，建议用户逐步迁移到 V2Ray 或 Trojan 等更现代的协议以获得更好稳定性。    </div>
+        mux 是多路复用技术，可在单一连接上传输多路流量，从而减少握手次数与连接开销。优点是提升短连接并发效率，缺点是在丢包或单连接异常时可能影响多条会话并增加调试复杂度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 如何管理不同用户的带宽？</h5></div>
+    <div class="panel-body">
+        管理员可以为每个用户设置独立带宽限制和流量配额。超出配额时可自动阻断或降速，确保服务器资源合理分配，避免单用户占用过多带宽，保障整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 可以管理多少个节点？</h5></div>
+    <div class="panel-body">
+        Potatso Lite 可以管理数十个节点，适合轻量用户使用。虽然不支持批量自动更新，但可以手动添加和删除节点，结合策略组实现基本分流和管理功能。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 使用哪种加密算法？</h5></div>
+    <div class="panel-body">
+        Hysteria2 默认使用 AEAD 加密算法（如 ChaCha20-Poly1305），并可结合 TLS 层加密保障安全性。其设计兼顾速度与抗干扰能力，适合高延迟跨境网络环境。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -271,16 +271,16 @@ notify-send </span><span><span class="hljs-string">'Shadowrocket 启动成功！
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-12-19-free-node-subscribe.htm" title="PC加速器 | 12月19日19.1M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 12月19日19.1M/S|免费Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-2-clash-verge-rev-github.htm" title="PC加速器 | 1月2日21.5M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 1月2日21.5M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-12-15-clash-verge-rev-node-github.htm" title="PC加速器 | 12月15日18.2M/S|免费V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 12月15日18.2M/S|免费V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-20-clash-verge-rev-node-share.htm" title="PC加速器 | 12月20日22.6M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 12月20日22.6M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-7-clash-verge-rev-node-share.htm" title="PC加速器 | 12月7日18.7M/S|免费Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 12月7日18.7M/S|免费Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/news/article-181670.htm" title="手机一键科学上网全攻略：解锁全球网络的高效技巧与安全指南">手机一键科学上网全攻略：解锁全球网络的高效技巧与安全指南</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-3-clash-node-daily-updates.htm" title="PC加速器 | 12月3日22.1M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 12月3日22.1M/S|免费Shadowrocket节点/V2ray节点/Clash节点/Singbox节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/news/article-182463.htm" title="全面解析飞机场Clash：从入门到精通的完整指南">全面解析飞机场Clash：从入门到精通的完整指南</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-6-clash-node.htm" title="PC加速器 | 12月6日20.3M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/Clash节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 12月6日20.3M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/Clash节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/news/article-180082.htm" title="iOS设备上SSR科学上网全面指南：下载、配置与使用全解析">iOS设备上SSR科学上网全面指南：下载、配置与使用全解析</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-5-clash-stash.htm" title="PC加速器 | 12月5日22.3M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 12月5日22.3M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/news/article-180493.htm" title="Clash男鞋全解析：打造男士质感穿搭的必备之选">Clash男鞋全解析：打造男士质感穿搭的必备之选</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-25-clash-stash-node.htm" title="PC加速器 | 12月25日22.9M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 12月25日22.9M/S|免费Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-21-clash-stash.htm" title="PC加速器 | 12月21日20.2M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 12月21日20.2M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-31-clash-verge-rev-node-github.htm" title="PC加速器 | 12月31日18.1M/S|免费Clash节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 12月31日18.1M/S|免费Clash节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-16-clash-verge-rev-node-github.htm" title="PC加速器 | 12月16日19.7M/S|免费V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 12月16日19.7M/S|免费V2ray节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-13-clash-meta-github.htm" title="PC加速器 | 12月13日18.7M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/Clash节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 12月13日18.7M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/Clash节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-23-clash-verge-rev-github.htm" title="PC加速器 | 12月23日22.8M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 12月23日22.8M/S|免费SSR节点/V2ray节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-5-clash-stash.htm" title="PC加速器 | 1月5日18.7M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐">PC加速器 | 1月5日18.7M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -292,13 +292,10 @@ notify-send </span><span><span class="hljs-string">'Shadowrocket 启动成功！
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
+                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                     </ul>
     </div>
